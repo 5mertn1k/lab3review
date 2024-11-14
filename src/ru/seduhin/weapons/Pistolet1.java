@@ -1,4 +1,4 @@
-package ru.surname.weapons;
+package ru.seduhin.weapons;
 public class Pistolet1 extends Weapon {
     final int maxAmmo;
 
@@ -6,13 +6,10 @@ public class Pistolet1 extends Weapon {
         return maxAmmo;
     }
 
-    Pistolet1(int ammo, int maxAmmo) {
+    public Pistolet1(int ammo, int maxAmmo) {
         super(ammo);
         if (maxAmmo <= 0 )
             throw new IllegalArgumentException("Максимальная вместимость должна быть положительным числом.");
-        if (ammo<0){
-            throw new IllegalArgumentException("Количество пуль должно быть неотрицательным. ");
-        }
         if (ammo>maxAmmo){
             throw new IllegalArgumentException("Пуль не может быть больше вместимости!");
         }
@@ -20,7 +17,7 @@ public class Pistolet1 extends Weapon {
         this.maxAmmo = maxAmmo;
     }
 
-    Pistolet1() {
+    public Pistolet1() {
         super(5);
         this.maxAmmo = 10;
     }
@@ -46,7 +43,6 @@ public class Pistolet1 extends Weapon {
         return bullets - addedBullets;
     }
 
-    @Override
     public String toString() {
         int currentAmmo = ammo();
         if ((currentAmmo>19 || currentAmmo<11) && (currentAmmo%10==1))

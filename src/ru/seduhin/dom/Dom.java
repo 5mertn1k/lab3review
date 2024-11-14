@@ -1,5 +1,4 @@
-package ru.surname.dom;
-import ru.surname.weapons.Weapon;
+package ru.seduhin.dom;
 public class Dom {
     final int floor;
     //    int setFloor(int floor){
@@ -10,7 +9,7 @@ public class Dom {
         return this.floor;
     }
 
-    Dom(int floor){
+    public Dom(int floor){
         if (floor<0) {
             throw new IllegalArgumentException("<0");
         }

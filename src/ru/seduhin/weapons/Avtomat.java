@@ -1,23 +1,23 @@
-package ru.surname.weapons;
+package ru.seduhin.weapons;
 public class Avtomat extends pistolet {
     final int speed;
 
     int getspeed() {
         return speed;
     }
-    
-    Avtomat() {
+
+    public Avtomat() {
         super(0, 30);
         this.speed = 30; 
     }
 
-    Avtomat(int maxAmmo) {
+    public Avtomat(int maxAmmo) {
         super(0, maxAmmo);
         this.speed = maxAmmo / 2;
     }
 
 
-    Avtomat(int maxAmmo, int speed) {
+    public Avtomat(int maxAmmo, int speed) {
         super(0, maxAmmo);
         if (speed <= 0) {
             throw new IllegalArgumentException("Скорострельность должна быть положительной.");
@@ -50,9 +50,9 @@ public class Avtomat extends pistolet {
     @Override
     public String toString() {
         if ((getpul()>19 || getpul()<11) && (getpul()%10==1))
-            return "пистолет с " + getpul() + " патроном, скорострельностью "+speed;
+            return "автомат с " + getpul() + " патроном, скорострельностью "+speed;
         else
-            return "пистолет с " + getpul() + " патронами, скорострельностью "+speed;
+            return "автомат с " + getpul() + " патронами, скорострельностью "+speed;
     }
 }
 

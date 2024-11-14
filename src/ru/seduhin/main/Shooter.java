@@ -1,4 +1,6 @@
-package ru.seduhin.shooter;
+package ru.seduhin.main;
+import ru.seduhin.weapons.Weapon;
+
 class Shooter {
     private String name;
     private Weapon weapon;

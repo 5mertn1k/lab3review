@@ -1,6 +1,5 @@
-package ru.surname.mas;
+package ru.seduhin.mas;
 import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Massiv {
@@ -8,12 +7,12 @@ public class Massiv {
 
 
     // с независимыми значениями (через запятую) или массивом
-    Massiv(int... mas) {
+    public Massiv(int... mas) {
         this.mas = Arrays.copyOf(mas, mas.length);
     }
 
     //  с другим списком
-    Massiv(List<Integer> mas) {
+    public Massiv(List<Integer> mas) {
         this.mas = mas.stream().mapToInt(Integer::intValue).toArray();
     }
 

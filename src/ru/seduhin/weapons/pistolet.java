@@ -1,20 +1,20 @@
-package ru.surname.weapons;
+package ru.seduhin.weapons;
 public class pistolet {
     private int kol;
     final int maxkol;
 
-    int setKol(int kol){
+    public int setKol(int kol){
         this.kol=kol;
         return this.kol;
     }
-    int getpul(){
+    public int getpul(){
         return this.kol;
     }
-    int getMaxKol() {
+    public int getMaxKol() {
         return this.maxkol;
     }
 
-    pistolet(int kol, int maxkol) {
+    public pistolet(int kol, int maxkol) {
         this.kol = kol;
         this.maxkol=maxkol;
     }

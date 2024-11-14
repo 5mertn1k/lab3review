@@ -1,44 +1,67 @@
-package ru.surname.main;
-import ru.surname.weapons.Weapon;
+package ru.seduhin.main;
+import ru.seduhin.geometry.Point;
+import ru.seduhin.weapons.*;
+import ru.seduhin.dom.*;
+import ru.seduhin.mas.*;
+//import ru.seduhin.main.Shooter;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
+import static java.lang.Integer.parseInt;
+import static java.lang.Math.pow;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Collections;
+import java.util.Arrays;
 
 public class Main {
+    public static double exponentiate(String x, String y) {
+        int x1;
+        int y1;
+        try {
+            x1 = parseInt(x);
+            y1 = parseInt(y);
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка: оба параметра должны быть целыми числами.");
+            return Double.NaN;
+        }
+
+        return pow(x1, y1);
+    }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         //1.1
 //        int d;
 //        System.out.println("Сколько сущностей дом вы хотите создать?");
 //
-//        while (true){
-//            if (in.hasNextInt()){
-//                d= in.nextInt();
-//                if (d>0){
+//        while (true) {
+//            if (in.hasNextInt()) {
+//                d = in.nextInt();
+//                if (d > 0) {
 //                    break;
-//                }
-//                else{
+//                } else {
 //                    System.out.println("Число должно быть положительным! Введите снова:");
 //                }
-//            }
-//            else{
+//            } else {
 //                System.out.println("Некоректный ввод! Введите снова:");
 //                in.next();
 //            }
 //        }
-//        for(int i = 1;i<=d;i++){
+//        for (int i = 1; i <= d; i++) {
 //            System.out.println("Введите число для класса Дом:");
 //            if (in.hasNextInt()) {
 //                int floor = in.nextInt();
 //                Dom Dom = new Dom(floor);
 //                System.out.println(Dom.toString());
-//            }
-//            else{
+//            } else {
 //                System.out.println("ошибка");
+//                break;
 //            }
 //        }
-//        in.nextLine();
         //1.5
-//        try{
+//        try {
 //            System.out.print("Введите максимальную вместимость магазина: ");
 //            int maxkol = in.nextInt();
 //            if (maxkol <= 0) {
@@ -50,7 +73,7 @@ public class Main {
 //            if (kol < 0 || kol > maxkol) {
 //                throw new IllegalArgumentException("Количество патронов должно быть в пределах от 0 до " + maxkol + ".");
 //            }
-//            pistolet pistolet=new pistolet(kol,maxkol);
+//            pistolet pistolet = new pistolet(kol, maxkol);
 //            System.out.println("Пистолет успешно создан: " + pistolet);
 //
 //            while (true) {
@@ -113,8 +136,7 @@ public class Main {
 //                        break;
 //                }
 //            }
-//        }
-//        catch (InputMismatchException e) {
+//        } catch (InputMismatchException e) {
 //            System.out.println("Ошибка ввода!");
 //        }
 
@@ -212,6 +234,7 @@ public class Main {
 //        } catch (InputMismatchException e) {
 //            System.out.println("Ошибка ввода! Введите корректное значение.");
 //        }
+
         //3.4
 //        System.out.println("Выберите способ создания автомата:");
 //        System.out.println("1. Создать автомат по умолчанию (емкость 30, скорострельность 30)");
@@ -248,8 +271,7 @@ public class Main {
 //            in.next();
 //            avtomat = new Avtomat();
 //        }
-//        int q=1;
-//        while (q==1) {
+//        while (true) {
 //            System.out.println("\nВыберите действие:");
 //            System.out.println("1. Узнать текущий заряд");
 //            System.out.println("2. Проверить, заряжен ли автомат");
@@ -269,6 +291,10 @@ public class Main {
 //                in.next();
 //                continue;
 //            }
+//            if (action==0){
+//                System.out.println("Выход...");
+//                break;
+//            }
 //            try {
 //                switch (action) {
 //                    case 1:
@@ -282,7 +308,7 @@ public class Main {
 //                        int bullets = in.nextInt();
 //                        int ost = avtomat.reload(bullets);
 //                        if (ost > 0) {
-//                            System.out.println("Автомат полностью заряжен. Лишние: " + ost );
+//                            System.out.println("Автомат полностью заряжен. Лишние: " + ost);
 //                        } else {
 //                            System.out.println("Автомат успешно перезаряжен.");
 //                        }
@@ -305,15 +331,11 @@ public class Main {
 //                    case 8:
 //                        System.out.println(avtomat);
 //                        break;
-//                    case 9:
-//                        System.out.println("Выход...");
-//                        q=0;
 //                    default:
 //                        System.out.println("Некорректный ввод! Пожалуйста, выберите действие от 1 до 9.");
 //                }
 //
-//            }
-//            catch (InputMismatchException e) {
+//            } catch (InputMismatchException e) {
 //                System.out.println("Ошибка ввода! Пожалуйста, введите номер действия.");
 //                in.next();
 //            }
@@ -331,14 +353,15 @@ public class Main {
 //                System.out.println("Ошибка: начальное количество патронов должно быть неотрицательным, а максимальное количество положительным.");
 //                return;
 //            }
-//            pistolet=new Pistolet1(ammo,maxAmmo);
-//        } catch (InputMismatchException e) {
+//            pistolet = new Pistolet1(ammo, maxAmmo);
+//        }
+//        catch (InputMismatchException e) {
 //            System.out.println("Ошибка ввода! Пожалуйста, вводите только целые числа.");
 //            return;
 //        }
 //
-//        System.out.println("Ваш пистолет создан: " + pistolet);
 //
+//        System.out.println("Ваш пистолет создан: " + pistolet);
 //        while (true) {
 //            System.out.println("\nВыберите действие:");
 //            System.out.println("1 - Выстрелить");
@@ -355,6 +378,10 @@ public class Main {
 //                in.next();
 //                continue;
 //            }
+//            if (choice2==0){
+//                System.out.println("exit..");
+//                break;
+//            }
 //            try {
 //                switch (choice2) {
 //                    case 1 -> pistolet.shoot();
@@ -369,12 +396,8 @@ public class Main {
 //                        }
 //                    }
 //                    case 3 -> System.out.println(pistolet.isLoaded() ? "Пистолет заряжен" : "Пистолет разряжен");
-//                    case 4 -> System.out.println("Текущее количество патронов: " + pistolet.ammo());
+//                    case 4 -> System.out.println("Текущее количество патронов: " + pistolet.toString());
 //                    case 5 -> System.out.println("Максимальная вместимость: " + pistolet.getMaxAmmo());
-//                    case 0 -> {
-//                        System.out.println("Выход из программы.");
-//                        return;
-//                    }
 //                    default -> System.out.println("Неверный выбор, пожалуйста, выберите вариант от 0 до 5.");
 //
 //
@@ -415,11 +438,11 @@ public class Main {
 //            System.out.println("2 - Автомат");
 //            System.out.println("3 - Без оружия");
 //            System.out.println("Ваш выбор: ");
-//            int choice;
+//            int choice1;
 //            while (true) {
 //                if (in.hasNextInt()) {
-//                    choice = in.nextInt();
-//                    if (choice >= 1 && choice <= 3) {
+//                    choice1 = in.nextInt();
+//                    if (choice1 >= 1 && choice1 <= 3) {
 //                        break;
 //                    } else {
 //                        System.out.println("Ошибка: введите число от 1 до 3.");
@@ -429,7 +452,7 @@ public class Main {
 //                    in.next();
 //                }
 //            }
-//            switch (choice) {
+//            switch (choice1) {
 //                case 1 -> {
 //                    System.out.print("Введите количество патронов в пистолете: ");
 //                    int ammo;
@@ -500,53 +523,141 @@ public class Main {
 //        for (Shooter shooter : shooters) {
 //            shooter.shoot();
 //        }
-        System.out.println("Сколько точек вы хотите создать?");
-        int numberOfPoints;
+
+        //6.4
+//        System.out.println("Сколько точек вы хотите создать?");
+//        int numberOfPoints;
+//        while (true) {
+//            try {
+//                System.out.print("Введите целое число: ");
+//                numberOfPoints = in.nextInt();
+//                if (numberOfPoints <= 0) {
+//                    System.out.println("Ошибка! Введите положительное число.");
+//                    continue;
+//                }
+//                break;
+//            } catch (NumberFormatException e) {
+//                System.out.println("Ошибка ввода! Введите корректное целое число.");
+//            }
+//        }
+//
+//        Point[] points = new Point[numberOfPoints];
+//
+//
+//        for (int i = 0; i < numberOfPoints; i++) {
+//            double x = 0;
+//            double y = 0;
+//            while (true) {
+//                try {
+//                    System.out.println("Введите координаты для точки " + (i + 1) + ":");
+//                    System.out.print("Координата X: ");
+//                    x = in.nextDouble();
+//                    System.out.print("Координата Y: ");
+//                    y = in.nextDouble();
+//                    break;
+//                } catch (NumberFormatException e) {
+//                    System.out.println("Ошибка ввода! Введите корректное число.");
+//                }
+//            }
+//            points[i] = new Point(x, y);
+//            System.out.println("Создана точка: " + points[i]);
+//        }
+//
+//        System.out.println("\nПроверим, есть ли одинаковые точки.");
+//        for (int i = 0; i < numberOfPoints; i++) {
+//            for (int j = i + 1; j < numberOfPoints; j++) {
+//                if (points[i].equals(points[j])) {
+//                    System.out.println("Точка " + (i + 1) + " и Точка " + (j + 1) + " совпадают по координатам.");
+//                }
+//            }
+//        }
+
+        //7.3
+//        System.out.print("Введите число X: ");
+//        String x = in.nextLine().trim();
+//        System.out.print("Введите число Y: ");
+//        String y = in.nextLine().trim();
+//        double result = exponentiate(x, y);
+//
+//        if (!Double.isNaN(result)) {
+//            System.out.println("Результат " + x + " в степени " + y + " равен: " + result);
+//        } else {
+//            System.out.println("Невозможно выполнить возведение в степень.");
+//        }
+
+        //8.2
+        System.out.println("Добро пожаловать! Создадим ваш пистолет.");
+        Pistolet1up pistolet;
+        try {
+            System.out.print("Введите начальное количество патронов: ");
+            int ammo = in.nextInt();
+            System.out.print("Введите максимальное количество патронов: ");
+            int maxAmmo = in.nextInt();
+
+            if (ammo < 0 || maxAmmo <= 0) {
+                System.out.println("Ошибка: начальное количество патронов должно быть неотрицательным, а максимальное количество положительным.");
+                return;
+            }
+            pistolet = new Pistolet1up(ammo, maxAmmo);
+        }
+        catch (InputMismatchException e) {
+            System.out.println("Ошибка ввода! Пожалуйста, вводите только целые числа.");
+            return;
+        }
+
+
+        System.out.println("Ваш пистолет создан: " + pistolet);
         while (true) {
+            System.out.println("\nВыберите действие:");
+            System.out.println("1 - Выстрелить");
+            System.out.println("2 - Перезарядить");
+            System.out.println("3 - Проверить состояние (заряжен или разряжен)");
+            System.out.println("4 - Показать текущее количество патронов");
+            System.out.println("5 - Показать максимальную вместимость");
+            System.out.println("6 - Разрядить пистолет");
+            System.out.println("0 - Выход");
+            int choice2;
             try {
-                System.out.print("Введите целое число: ");
-                numberOfPoints = in.nextInt();
-                if (numberOfPoints <= 0) {
-                    System.out.println("Ошибка! Введите положительное число.");
-                    continue;
-                }
+                choice2 = in.nextInt();
+            }catch(InputMismatchException e) {
+                System.out.println("Ошибка ввода! Пожалуйста, вводите только целые числа.");
+                in.next();
+                continue;
+            }
+            if (choice2==0){
+                System.out.println("exit..");
                 break;
-            } catch (NumberFormatException e) {
-                System.out.println("Ошибка ввода! Введите корректное целое число.");
             }
-        }
+            try {
+                switch (choice2) {
+                    case 1 -> pistolet.shoot();
+                    case 2 -> {
+                        System.out.print("Сколько патронов добавить? ");
+                        try {
+                            int bullets = in.nextInt();
+                            int leftover = pistolet.reload(bullets);
+                            System.out.println("Осталось неиспользованных патронов: " + leftover);
+                        } catch (InputMismatchException e) {
+                            System.out.println("Ошибка ввода! Пожалуйста, вводите только целые числа.");
+                        }
+                    }
+                    case 3 -> System.out.println(pistolet.isLoaded() ? "Пистолет заряжен" : "Пистолет разряжен");
+                    case 4 -> System.out.println("Текущее количество патронов: " + pistolet.toString());
+                    case 5 -> System.out.println("Максимальная вместимость: " + pistolet.getMaxAmmo());
+                    case 6 ->{
+                       int back = pistolet.unload();
+                       System.out.println("Пистолет разряжен. Снято патронов: " + back);
+                    }
+                    default -> System.out.println("Неверный выбор, пожалуйста, выберите вариант от 0 до 5.");
 
-        Weapon.Point[] points = new Weapon.Point[numberOfPoints];
 
-
-        for (int i = 0; i < numberOfPoints; i++) {
-            double x = 0;
-            double y = 0;
-            while (true) {
-                try {
-                    System.out.println("Введите координаты для точки " + (i + 1) + ":");
-                    System.out.print("Координата X: ");
-                    x = in.nextDouble();
-                    System.out.print("Координата Y: ");
-                    y = in.nextDouble();
-                    break;
-                } catch (NumberFormatException e) {
-                    System.out.println("Ошибка ввода! Введите корректное число.");
                 }
             }
-            points[i] = new Weapon.Point(x, y);
-            System.out.println("Создана точка: " + points[i]);
-        }
-
-        System.out.println("\nПроверим, есть ли одинаковые точки.");
-        for (int i = 0; i < numberOfPoints; i++) {
-            for (int j = i + 1; j < numberOfPoints; j++) {
-                if (points[i].equals(points[j])) {
-                    System.out.println("Точка " + (i + 1) + " и Точка " + (j + 1) + " совпадают по координатам.");
-                }
+            catch(InputMismatchException e) {
+                System.out.println("Ошибка ввода! Пожалуйста, вводите только целые числа.");
+                in.next();
             }
         }
-
 
 
         in.close();
@@ -558,3 +669,4 @@ public class Main {
 
 
 }
+

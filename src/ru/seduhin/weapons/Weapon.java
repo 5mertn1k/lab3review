@@ -1,6 +1,6 @@
-package ru.surname.weapons;
+package ru.seduhin.weapons;
 
-abstract class Weapon {
+public abstract class Weapon {
         private int ammo;
 
         public Weapon(int ammo) {
@@ -8,9 +8,9 @@ abstract class Weapon {
             this.ammo = ammo;
         }
 
-        abstract void shoot();
+        public abstract void shoot();
 
-        int ammo() {
+        public int ammo() {
             return ammo;
         }
 

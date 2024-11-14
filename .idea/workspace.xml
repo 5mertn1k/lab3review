@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7111a21e-7d70-4c1f-8038-aedf1df55ff5" name="Changes" comment="" />
+    <list default="true" id="7111a21e-7d70-4c1f-8038-aedf1df55ff5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/dom/Dom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/dom/Dom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/main/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/main/Shooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/mas/Massiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/mas/Massiv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Avtomat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Avtomat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1up.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1up.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weaponup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weaponup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/pistolet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/pistolet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "5mertn1k"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/5mertn1k/lab3.git",
+    "accountId": "a6707d65-fe37-4f91-a743-54fac91768fa"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2nwOk606dQqIa63AcwZrzSPZjcU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -21,8 +58,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/seduh/IdeaProjects/lab3/src/Main.java"
   }
@@ -37,16 +76,5 @@
       <updated>1729880814934</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

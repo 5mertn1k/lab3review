@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
+package ru.seduhin.weapons;
 public class Automatup {
 }

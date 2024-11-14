@@ -1,5 +1,5 @@
-package ru.surname.weapons;
-class Automat extends Weapon {
+package ru.seduhin.weapons;
+public class Automat extends Weapon {
     final int rateOfFire;
 
     public Automat(int ammo, int rateOfFire) {
@@ -12,7 +12,7 @@ class Automat extends Weapon {
     }
 
     @Override
-    void shoot() {
+    public void shoot() {
         int shots =this.rateOfFire;
         for (int i = 0; i < shots; i++) {
             if (getAmmo() ) {
