@@ -81,10 +81,12 @@ public class Automatup extends Pistol {
      */
     @Override
     public String toString() {
-        if ((getBullets()>19 || getBullets()<11) && (getBullets()%10==1))
-            return "автомат с " + getBullets() + " патроном, скорострельностью "+speed;
-        else
-            return "автомат с " + getBullets() + " патронами, скорострельностью "+speed;
+        if ((getBullets()>19 || getBullets()<11) && (getBullets()%10==1)) {
+            return "автомат с " + getBullets() + " патроном, скорострельностью " + speed;
+        }
+        else {
+            return "автомат с " + getBullets() + " патронами, скорострельностью " + speed;
+        }
     }
 }
 

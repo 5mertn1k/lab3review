@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7111a21e-7d70-4c1f-8038-aedf1df55ff5" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/dom/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/home/Home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/mas/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/array/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/array/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/array/Array.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +33,12 @@
     &quot;assignee&quot;: &quot;5mertn1k&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/5mertn1k/lab3review.git",
-    "accountId": "a6707d65-fe37-4f91-a743-54fac91768fa"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/5mertn1k/lab3review.git&quot;,
+    &quot;accountId&quot;: &quot;a6707d65-fe37-4f91-a743-54fac91768fa&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -72,7 +75,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749139931744</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1749140251896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749140251896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

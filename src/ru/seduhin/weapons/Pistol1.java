@@ -74,10 +74,12 @@ public class Pistol1 extends Weapon {
      */
     public String toString() {
         int currentAmmo = ammo();
-        if ((currentAmmo>19 || currentAmmo<11) && (currentAmmo%10==1))
+        if ((currentAmmo>19 || currentAmmo<11) && (currentAmmo%10==1)) {
             return "пистолет с " + currentAmmo + " патроном";
-        else
+        }
+        else {
             return "пистолет с " + currentAmmo + " патронами";
+        }
     }
 
     /**

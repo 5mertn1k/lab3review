@@ -95,9 +95,11 @@ public class Pistol {
      *Метод для вывода
      */
     public String toString(){
-        if ((this.bullets >19 || this.bullets <11) && (this.bullets %10==1))
+        if ((this.bullets >19 || this.bullets <11) && (this.bullets %10==1)) {
             return "пистолет с " + this.bullets + " патроном";
-        else
+        }
+        else {
             return "пистолет с " + this.bullets + " патронами";
+        }
     }
 }

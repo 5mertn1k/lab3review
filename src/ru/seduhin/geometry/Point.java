@@ -25,8 +25,12 @@ public class Point {
      * @return true если объекты равны, false в противном случае
      */
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (this == obj){
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()){
+            return false;
+        }
 
         Point other = (Point) obj;
         return this.x == other.x && this.y == other.y;

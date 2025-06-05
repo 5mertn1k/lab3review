@@ -13,6 +13,7 @@ public class Array {
      * @return размер массива
      */
     public int size() {
+
         return elements.length;
     }
     /**
