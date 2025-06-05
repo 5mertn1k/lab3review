@@ -1,3 +1,4 @@
+/* Продолжение задания №3 */
 package ru.seduhin.mas;
 import java.util.Arrays;
 import java.util.List;
@@ -7,31 +8,31 @@ import java.util.List;
  * Предоставляет основные операции для работы с массивами.
  */
 public class Array {
-    private final int[] mas;
+    private final int[] elements;
     /**
      * @return размер массива
      */
     public int size() {
-        return mas.length;
+        return elements.length;
     }
     /**
      * Создает массив из переданных значений
-     * @param mas элементы массива
+     * @param elements элементы массива
      */
-    public Array(int... mas) {
-        this.mas = Arrays.copyOf(mas, mas.length);
+    public Array(int... elements) {
+        this.elements = Arrays.copyOf(elements, elements.length);
     }
 
     /**
      * Создает массив из списка целых чисел
-     * @param mas список целых чисел
+     * @param elements список целых чисел
      */
-    public Array(List<Integer> mas) {
-        if (mas == null) {
+    public Array(List<Integer> elements) {
+        if (elements == null) {
             System.err.println("Ошибка: передан null вместо списка. Создан пустой массив.");
-            this.mas = new int[0];
+            this.elements = new int[0];
         } else {
-            this.mas = mas.stream().mapToInt(Integer::intValue).toArray();
+            this.elements = elements.stream().mapToInt(Integer::intValue).toArray();
         }
     }
 
@@ -41,11 +42,11 @@ public class Array {
      * @return значение элемента
      */
     public int get(int index) {
-        if (index < 0 || index >= mas.length) {
+        if (index < 0 || index >= elements.length) {
             System.err.println("Ошибка: индекс " + index + " выходит за границы массива");
             return 0;
         }
-        return mas[index];
+        return elements[index];
     }
     /**
      * Создает новый массив с измененным элементом
@@ -54,32 +55,32 @@ public class Array {
      * @return новый массив с изменением
      */
     public Array set(int index, int newValue) {
-        if (index < 0 || index >= mas.length) {
+        if (index < 0 || index >= elements.length) {
             System.err.println("Неверный индекс: " + index);
         }
-        int[] newmas = Arrays.copyOf(mas, mas.length);
-        newmas[index] = newValue;
-        return new Array(newmas);
+        int[] newarray = Arrays.copyOf(elements, elements.length);
+        newarray[index] = newValue;
+        return new Array(newarray);
     }
     /**
      * @return строковое представление массива
      */
     public String toString() {
-        StringBuilder qw = new StringBuilder("[");
-        for (int i = 0; i < mas.length; i++) {
-            qw.append(mas[i]);
-            if (i < mas.length - 1) {
-                qw.append(", ");
+        StringBuilder builder = new StringBuilder("[");
+        for (int i = 0; i < elements.length; i++) {
+            builder.append(elements[i]);
+            if (i < elements.length - 1) {
+                builder.append(", ");
             }
         }
-        qw.append("]");
-        return qw.toString();
+        builder.append("]");
+        return builder.toString();
     }
     /**
      * @return true если массив пустой, false в противном случае
      */
     public boolean isEmpty() {
-        return mas.length == 0;
+        return elements.length == 0;
     }
 
 
@@ -88,6 +89,6 @@ public class Array {
      * @return копию внутреннего массива
      */
     public int[] toArray() {
-        return Arrays.copyOf(mas, mas.length);
+        return Arrays.copyOf(elements, elements.length);
     }
 }

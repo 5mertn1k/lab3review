@@ -1,43 +1,44 @@
+/* Продолжение задания №2 */
 package ru.seduhin.weapons;
 
 /**
  * Класс, представляющий пистолет с ограниченной емкостью магазина.
  * Реализует базовые операции: стрельба, перезарядка, проверка состояния.
  */
-public class pistolet {
-    private int kol;
-    private final int maxkol;
+public class Pistol {
+    private int bullets;
+    private final int maxcount;
 
     /**
      * Устанавливает текущее количество патронов
-     /* @param kol новое количество патронов
+     /* @param count новое количество патронов
      * @return фактически установленное количество патронов
      */
-    public int setKol(int kol){
-        this.kol=kol;
-        return this.kol;
+    public int setCount(int count){
+        this.bullets =count;
+        return this.bullets;
     }
     /**
      * @return текущее количество патронов
      */
-    public int getpul(){
-        return this.kol;
+    public int getBullets(){
+        return this.bullets;
     }
     /**
      * @return максимальную емкость магазина
      */
     public int getMaxKol() {
-        return this.maxkol;
+        return this.maxcount;
     }
 
     /**
      * Создает пистолет с указанным количеством патронов и емкостью магазина
-     /* @param initialAmmo начальное количество патронов
-     /* @param maxCapacity максимальная емкость магазина
+     /* @param bullets начальное количество патронов
+     /* @param maxcount максимальная емкость магазина
      */
-    public pistolet(int kol, int maxkol) {
-        this.kol = kol;
-        this.maxkol=maxkol;
+    public Pistol(int bullets, int maxcount) {
+        this.bullets = bullets;
+        this.maxcount = maxcount;
     }
     /**
      * Перезаряжает пистолет
@@ -49,12 +50,12 @@ public class pistolet {
             System.err.println("Нельзя зарядить отрицательное количество патронов");
             return 0;
         }
-        int free = maxkol - kol;
+        int free = maxcount - this.bullets;
         if (bullets > free) {
-            this.kol = this.maxkol;
+            this.bullets = this.maxcount;
             return bullets - free;
         } else {
-            this.kol += bullets;
+            this.bullets += bullets;
             return 0;
         }
     }
@@ -63,26 +64,26 @@ public class pistolet {
      * @return строку с состоянием пистолета
      */
     public String isLoaded() {
-        return kol > 0 ? "Пистолет заряжен" : "Пистолет разряжен";
+        return bullets > 0 ? "Пистолет заряжен" : "Пистолет разряжен";
     }
     /**
      * Разряжает пистолет
      * @return количество извлеченных патронов
      */
     public int unload() {
-        int back = this.kol;
-        this.kol = 0;
+        int back = this.bullets;
+        this.bullets = 0;
         return back;
     }
     /**
      * Производит выстрелы
      * @param n количество выстрелов
      */
-    public void strelba(int n) {
+    public void shoot(int n) {
         for (int i = 0; i < n; i++) {
-            if (this.kol>0){
+            if (this.bullets >0){
                 System.out.println("Бах!");
-                this.kol--;
+                this.bullets--;
             }
             else{
                 System.out.println("Клац!");
@@ -94,9 +95,9 @@ public class pistolet {
      *Метод для вывода
      */
     public String toString(){
-        if ((this.kol>19 || this.kol<11) && (this.kol%10==1))
-            return "пистолет с " + this.kol + " патроном";
+        if ((this.bullets >19 || this.bullets <11) && (this.bullets %10==1))
+            return "пистолет с " + this.bullets + " патроном";
         else
-            return "пистолет с " + this.kol + " патронами";
+            return "пистолет с " + this.bullets + " патронами";
     }
 }

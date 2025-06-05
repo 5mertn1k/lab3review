@@ -6,19 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="7111a21e-7d70-4c1f-8038-aedf1df55ff5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/dom/Dom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/dom/Dom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/dom/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/dom/Home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/geometry/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/main/Shooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/main/Shooter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/mas/Massiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/mas/Massiv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/mas/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/mas/Array.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Automatup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Avtomat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Avtomat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1up.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistolet1up.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1up.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Pistol1up.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weaponup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/Weaponup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/seduhin/weapons/pistolet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/seduhin/weapons/pistolet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "5mertn1k"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;5mertn1k&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/5mertn1k/lab3.git",
-    "accountId": "a6707d65-fe37-4f91-a743-54fac91768fa"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/5mertn1k/lab3.git&quot;,
+    &quot;accountId&quot;: &quot;a6707d65-fe37-4f91-a743-54fac91768fa&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -56,16 +55,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/seduh/IdeaProjects/lab3/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/seduh/IdeaProjects/lab3/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

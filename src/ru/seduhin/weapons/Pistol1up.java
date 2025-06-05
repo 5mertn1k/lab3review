@@ -1,10 +1,11 @@
+/* Продолжение задания №9 */
 package ru.seduhin.weapons;
 
 /**
  * Улучшенная версия пистолета с дополнительными функциями.
  * Наследует базовую функциональность от класса Weaponup.
  */
-public class Pistolet1up extends Weaponup {
+public class Pistol1up extends Weaponup {
     private final int maxAmmo;
 
     /**
@@ -19,7 +20,7 @@ public class Pistolet1up extends Weaponup {
      * @param ammo начальное количество патронов
      * @param maxAmmo максимальная емкость магазина
      */
-    public Pistolet1up(int ammo, int maxAmmo) {
+    public Pistol1up(int ammo, int maxAmmo) {
         super(ammo);
         if (maxAmmo <= 0){
             System.err.println("Максимальная вместимость должна быть положительным числом.");
@@ -38,7 +39,7 @@ public class Pistolet1up extends Weaponup {
      * - начальные патроны: 5
      * - максимальная емкость: 10
      */
-    public Pistolet1up() {
+    public Pistol1up() {
         super(5);
         this.maxAmmo = 10;
     }

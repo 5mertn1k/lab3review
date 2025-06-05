@@ -1,15 +1,16 @@
+/* Продолжение задания №4 */
 package ru.seduhin.weapons;
 
 /**
  * Класс автоматического оружия, наследующий функциональность пистолета
  * с добавлением скорострельности.
  */
-public class Avtomat extends pistolet {
+public class Automatup extends Pistol {
     private final int speed;
     /**
      * @return текущую скорострельность
      */
-    int getspeed() {
+    int getSpeed() {
         return speed;
     }
     /**
@@ -17,7 +18,7 @@ public class Avtomat extends pistolet {
      * - емкость магазина: 30 патронов
      * - скорострельность: 30 выстрелов в секунду
      */
-    public Avtomat() {
+    public Automatup() {
         super(0, 30);
         this.speed = 30; 
     }
@@ -26,7 +27,7 @@ public class Avtomat extends pistolet {
      * Скорострельность устанавливается как половина емкости.
      * @param maxAmmo максимальная емкость магазина
      */
-    public Avtomat(int maxAmmo) {
+    public Automatup(int maxAmmo) {
         super(0, maxAmmo);
         this.speed = maxAmmo / 2;
     }
@@ -34,9 +35,9 @@ public class Avtomat extends pistolet {
     /**
      * Создает автомат с указанными параметрами
      * @param maxAmmo максимальная емкость магазина
-     /* @param rateofFire скорострельность (выстрелов в секунду)
+     /* @param speed скорострельность (выстрелов в секунду)
      */
-    public Avtomat(int maxAmmo, int speed) {
+    public Automatup(int maxAmmo, int speed) {
         super(0, maxAmmo);
         if (speed <= 0) {
             throw new IllegalArgumentException("Скорострельность должна быть положительной.");
@@ -46,15 +47,14 @@ public class Avtomat extends pistolet {
 
     /**
      * Производит стрельбу с учетом скорострельности
-     /* @param seconds время стрельбы в секундах
+     /* @param n время стрельбы в секундах
      */
-    @Override
-    public void strelba(int n) {
+    public void shoot(int n) {
         int shots = n * speed;
         for (int i = 0; i < shots; i++) {
-            if (getpul() > 0) {
+            if (getBullets() > 0) {
                 System.out.println("Бах!");
-                setKol(getpul() - 1);
+                setCount(getBullets() - 1);
             } else {
                 System.out.println("Клац!");
             }
@@ -65,14 +65,14 @@ public class Avtomat extends pistolet {
      * Производит стрельбу в течение указанного времени
      /* @param seconds время стрельбы в секундах
      */
-    public void strelbaNSeconds(int seconds) {
+    public void shootNSeconds(int seconds) {
         if (seconds <= 0) {
             System.err.println("Количество секунд должно быть положительным.");
             seconds=1;
-            strelba(seconds);
+            shoot(seconds);
         }
         else{
-            strelba(seconds);
+            shoot(seconds);
         }
 
     }
@@ -81,10 +81,10 @@ public class Avtomat extends pistolet {
      */
     @Override
     public String toString() {
-        if ((getpul()>19 || getpul()<11) && (getpul()%10==1))
-            return "автомат с " + getpul() + " патроном, скорострельностью "+speed;
+        if ((getBullets()>19 || getBullets()<11) && (getBullets()%10==1))
+            return "автомат с " + getBullets() + " патроном, скорострельностью "+speed;
         else
-            return "автомат с " + getpul() + " патронами, скорострельностью "+speed;
+            return "автомат с " + getBullets() + " патронами, скорострельностью "+speed;
     }
 }
 

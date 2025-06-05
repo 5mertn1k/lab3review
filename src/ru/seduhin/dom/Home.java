@@ -1,10 +1,12 @@
+/* Продолжение задания №1 */
+
 package ru.seduhin.dom;
 
 /**
  * Класс, представляющий дом с определенным количеством этажей.
  * Обеспечивает корректное отображение информации о доме.
  */
-public class Dom {
+public class Home {
     final int floor;
     //    int setFloor(int floor){
 //        this.floor=floor;// ошибка
@@ -21,7 +23,7 @@ public class Dom {
      * Создает дом с указанным количеством этажей
      * @param floor количество этажей (должно быть положительным)
      */
-    public Dom(int floor){
+    public Home(int floor){
         if (floor<0) {
             System.err.println("Ошибка: количество этажей не может быть отрицательным. Установлено значение 1.");
             this.floor=1;
@@ -35,7 +37,7 @@ public class Dom {
      * @param x количество этажей
      * @return строку с правильной формой слова
      */
-    public String slovo(int x){
+    public String word(int x){
         if ((x%100>=11 && x%100<=19) || (x%10!=1)){
             return "этажами";
         }
@@ -47,6 +49,6 @@ public class Dom {
      * @return строковое представление дома с указанием количества этажей
      */
     public String toString(){
-        return "дом с " + floor + " " + slovo(floor);
+        return "дом с " + floor + " " + word(floor);
     }
 }
