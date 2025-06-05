@@ -15,8 +15,8 @@ package ru.seduhin.main;
 
 import ru.seduhin.geometry.Point;
 import ru.seduhin.weapons.*;
-import ru.seduhin.dom.*;
-import ru.seduhin.mas.*;
+import ru.seduhin.home.*;
+import ru.seduhin.array.*;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -200,7 +200,7 @@ public class Main {
 
     /** Обрабатывает операции с Array */
     private static void handleMassivOperations(Scanner scanner) {
-        System.err.println("\n=== 3. Работа с классом Massiv ===");
+        System.out.println("\n=== 3. Работа с классом Massiv ===");
 
         Array array = null;
         System.out.println("Выберите способ создания списка:");
@@ -310,7 +310,7 @@ public class Main {
 
     /** Обрабатывает операции с Automatup */
     private static void handleAutomatOperations(Scanner scanner) {
-        System.err.println("\n=== 4. Работа с классом Automatup ===");
+        System.out.println("\n=== 4. Работа с классом Automatup ===");
 
         Automatup automatup;
         System.out.println("Выберите способ создания:");
@@ -402,7 +402,7 @@ public class Main {
 
     /** Обрабатывает операции с Pistol1 */
     private static void handlePistol1Operations(Scanner scanner) {
-        System.err.println("\n=== 5. Работа с классом Pistol1 ===");
+        System.out.println("\n=== 5. Работа с классом Pistol1 ===");
 
         try {
             System.out.print("Введите начальное количество патронов: ");
@@ -458,7 +458,7 @@ public class Main {
 
     /** Обрабатывает операции с Shooter */
     private static void handleShooterOperations(Scanner scanner) {
-        System.err.println("\n=== 6. Работа с классом Shooter ===");
+        System.out.println("\n=== 6. Работа с классом Shooter ===");
 
         System.out.print("Введите количество стрелков: ");
         try {
@@ -531,7 +531,7 @@ public class Main {
 
     /** Обрабатывает операции с Point */
     private static void handlePointOperations(Scanner scanner) {
-        System.err.println("\n=== 7. Работа с классом Point ===");
+        System.out.println("\n=== 7. Работа с классом Point ===");
 
         System.out.print("Введите количество точек: ");
         try {
@@ -573,7 +573,7 @@ public class Main {
 
     /** Обрабатывает возведение в степень */
     private static void handleExponentiation(Scanner scanner) {
-        System.err.println("\n=== 8. Возведение в степень ===");
+        System.out.println("\n=== 8. Возведение в степень ===");
 
         System.out.print("Введите основание (X): ");
         String x = scanner.next();
@@ -588,7 +588,7 @@ public class Main {
 
     /** Обрабатывает операции с Pistol1up */
     private static void handlePistol1UpOperations(Scanner scanner) {
-        System.err.println("\n=== 9. Работа с классом Pistol1up ===");
+        System.out.println("\n=== 9. Работа с классом Pistol1up ===");
 
         try {
             System.out.print("Введите начальное количество патронов: ");

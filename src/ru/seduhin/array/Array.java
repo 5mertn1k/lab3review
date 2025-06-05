@@ -1,5 +1,5 @@
 /* Продолжение задания №3 */
-package ru.seduhin.mas;
+package ru.seduhin.array;
 import java.util.Arrays;
 import java.util.List;
 
